@@ -1,0 +1,18 @@
+package stream;
+
+class MultithreadingDemo extends Thread {
+    public void run() {
+        System.out.println("--class multitreadingdemo is executing--");
+    }
+}
+
+public class multi_treading_class {
+
+        public static void main(String[] args)
+        {
+            MultithreadingDemo object = new MultithreadingDemo();
+                object.start();
+            }
+        }
+
+
