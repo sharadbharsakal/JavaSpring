@@ -1,29 +1,48 @@
 package stream;
-//With Class
+
 class MultithreadingDemo extends Thread {
+    @Override
     public void run() {
-        System.out.println("--class multitreadingdemo is executing--");
+        for(int i=0; i<10; i++) {
+            System.out.println("--child tread multitreadingdemo is executing--"+i);
+        }
     }
 }
-//Runnable
-public class Printer implements Runnable{
-	
-	@Override
-	public void run() {
-		System.out.println("Child thread is running....");
-		for(int i=0;i<20;i++) {
-			System.out.println("child "+" " + i);
-		}
-		System.out.println("===========================");
-	}
-}
 
+class MultithreadingDemo1 extends Thread {
+    @Override
+    public void run() {
+        for(int i=0; i<10; i++) {
+            System.out.println("--child 2 tread multitreadingdemo is executing--"+i);
+        }
+    }
+}
+ class Printer implements Runnable{
+
+    @Override
+    public void run() {
+        System.out.println("Child thread is running....");
+        for(int i=0;i<20;i++) {
+            System.out.println("child "+" " + i);
+        }
+        System.out.println("===========================");
+    }
+}
 public class multi_treading_class {
 
         public static void main(String[] args)
         {
-            MultithreadingDemo object = new MultithreadingDemo();
-                object.start();
+//            MultithreadingDemo object = new MultithreadingDemo();
+//                object.start();
+//            MultithreadingDemo1 object1 = new MultithreadingDemo1();
+//            object1.start();
+            Printer printer = new Printer();
+            Thread thread = new Thread(printer);
+            thread.start();
+                for(int i=0; i<10;i++)
+                {
+                    System.out.println(" main tread executing "+i);
+                }
             }
         }
 
