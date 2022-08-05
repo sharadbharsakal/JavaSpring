@@ -1,0 +1,26 @@
+package stream;
+
+import java.util.*;
+import java.util.stream.*;
+import java.util.Arrays;
+import java.util.List;
+
+public class String_length_using_stream {
+
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        int StringSize = scan.nextInt();
+        List<String> str = Collections.<String>emptyList();
+
+        for(int i=0; i<StringSize; i++)
+        {
+            String temp = scan.nextLine();
+            str.add(temp);
+        }
+//        Stream<String> arr_stream = Arrays.stream(str);
+        int count1 = str.stream().filter(s -> s.length() > 3).count();
+        System.out.println(count1);
+
+    }
+}
