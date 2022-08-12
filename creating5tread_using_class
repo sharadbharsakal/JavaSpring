@@ -1,0 +1,17 @@
+ class treadclass1 extends Thread{
+        @Override
+        public void run(){
+            System.out.println(" Hello All this is " + currentThread().getName());
+        }
+    }
+    
+    // Note : GBU compiler
+
+public class Main
+{
+	public static void main(String[] args) {
+	
+	 for(int i=1; i<=5; i++) {
+        treadclass1 obj1 = new treadclass1();  // created 5 tread with extending tread class
+        obj1.start();
+    }
