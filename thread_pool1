@@ -1,0 +1,37 @@
+import java.util.concurrent.*;
+
+class runnable implements Runnable
+{
+    private int i;
+    public runnable(int i)
+    {
+        this.i = i;
+    }
+    @Override
+    public void run()
+    {
+        System.out.println(i);
+        
+    }
+}
+
+// ----------   GDB online compiler ----------
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+        ExecutorService pool = Executors.newFixedThreadPool(5);   
+         for(int i=1; i<=10; i++)
+         {
+             runnable obj = new runnable(i);
+             pool.execute(obj);
+         }
+      
+      /* Main reason behind the thread pool is to reuse the created thread by reallocating the task to thread 
+       when the current task of thread is complete , all remaining task is waiting in a queue untill the thread 
+       is not free to assign new task in thread pool, in this program we have 5 thread and this execute or 
+       perform 10 task */
+       
+	}
+}
