@@ -3,7 +3,7 @@ public class Main
 {
 	public static void main(String[] args) {
 	
-	// Implementing hashset - taking 7 integer input store it in hashset-
+	
 	//-------GDB compiler used--------
 	
 	HashSet<Integer> num = new HashSet();
@@ -16,6 +16,7 @@ public class Main
 	num.add(12);
 	num.add(43);
 	num.add(43);//not store bcoz set having only unique elements.
+    num.add(11);//not store bcoz set having only unique elements.
 	
 	System.out.println(num);
 	
