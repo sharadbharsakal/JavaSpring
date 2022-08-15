@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	
+	// Implementing Stack - integer input store it in Stack 
+	//-------GDB compiler used--------
+	
+    Stack<Integer> stk = new Stack();
+    
+    stk.push(76);
+    stk.push(12);
+    stk.push(87);
+    stk.push(54);
+    stk.push(43);
+    stk.push(55);
+    stk.push(74);
+	
+	System.out.println(" Before Removing Element ");
+	System.out.println(stk);
+	System.out.println(" removing element "+ stk.pop());
+	System.out.println(" removing element "+ stk.pop());
+// 	System.out.println(stk.peek());
+	System.out.println(" After Removing Element ");
+	System.out.println(stk);
+	
+	
+ 
+	}
+}
