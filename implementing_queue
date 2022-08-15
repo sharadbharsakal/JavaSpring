@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	
+	// Implementing Queue - 6 integer input store it in Queue 
+	//-------GDB compiler used--------
+	
+    Queue<Integer> que = new LinkedList();//using linkedlist bcoz queue is interface
+    //Queue<Integer> que = new PriorityQueue(); - can also do same but PriorityQueue will set order to element
+    
+    que.offer(76);
+    que.offer(12);
+    que.offer(87);
+    que.offer(54);
+    que.offer(43);
+    que.offer(55);
+    
+	
+	System.out.println(" Before Removing Element ");
+	System.out.println(que);
+	System.out.println(" removing element "+ que.poll());
+	System.out.println(" removing element "+ que.poll());
+// 	System.out.println(stk.peek());
+	System.out.println(" After Removing Element ");
+	System.out.println(que);
+	
+	
+ 
+	}
+}
