@@ -3,7 +3,7 @@ public class Main
 {
 	public static void main(String[] args) {
 	
-	// Implementing Stack - integer input store it in Stack 
+	// Implementing Stack - 6 integer input store it in Stack 
 	//-------GDB compiler used--------
 	
     Stack<Integer> stk = new Stack();
@@ -14,7 +14,7 @@ public class Main
     stk.push(54);
     stk.push(43);
     stk.push(55);
-    stk.push(74);
+    
 	
 	System.out.println(" Before Removing Element ");
 	System.out.println(stk);
